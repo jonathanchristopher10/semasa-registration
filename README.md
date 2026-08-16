@@ -99,13 +99,16 @@ so the design system stays the single source of truth for look and behaviour.
 
 ---
 
-## Adaptive layout
+## Layout — mobile web
 
-One column, always. The breakpoint lives in `src/styles/app.css`:
+This is a **mobile website**, opened in a phone's Chrome/Safari. One column, always
+(see `src/styles/app.css`):
 
-- **< 600px (phones):** the app fills the viewport — no frame, no faux status bar.
-- **≥ 600px (tablet/desktop):** a centred `430 × 900` outlined phone frame on the
-  cream background, with the faux status bar and decorative stickers around it.
+- **Phones:** the app fills the viewport — full-screen, no chrome.
+- **Larger screens:** it stays a centred, mobile-width column (max 480px) on the
+  cream background, so it never stretches wide. No phone frame, no faux status bar.
+
+There is no install step or app store — it's just a URL.
 
 ---
 

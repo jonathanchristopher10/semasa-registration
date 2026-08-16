@@ -52,24 +52,26 @@ body {
   }
 }
 
-/* --- Adaptive shell -------------------------------------------------- *
- * Mobile-first: the app fills the viewport, no frame.
- * On wider screens it becomes a centred, outlined phone.
+/* --- Mobile-only shell ---------------------------------------------- *
+ * A plain mobile website, opened in Chrome/Safari. No phone frame.
+ * On phones it fills the viewport; on larger screens it stays a centred
+ * mobile-width column on cream, so it never stretches wide.
  * ------------------------------------------------------------------- */
 .sp-shell {
   position: relative;
   min-height: 100dvh;
   display: flex;
-  align-items: stretch;
   justify-content: center;
+  background: var(--surface-page);
   overflow-x: hidden;
 }
 
-.sp-phone {
+.sp-app {
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: 100dvh;
+  max-width: 480px;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(
@@ -79,56 +81,10 @@ body {
   );
 }
 
-.sp-statusbar {
-  display: none; /* hidden on real phones; shown inside the desktop frame */
-}
-
 .sp-scroll {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
   position: relative;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Decorative background stickers behind the phone (desktop only reveals them) */
-.sp-bg {
-  position: fixed;
-  pointer-events: none;
-  opacity: 0.5;
-  z-index: 0;
-  mix-blend-mode: multiply;
-}
-
-@media (min-width: 600px) {
-  .sp-shell {
-    align-items: center;
-    padding: 24px;
-  }
-  .sp-phone {
-    width: var(--frame-width);
-    min-height: 0;
-    height: min(900px, calc(100dvh - 48px));
-    border: var(--stroke-heavy) solid var(--border-ink);
-    border-radius: var(--radius-phone);
-    box-shadow: var(--shadow-lift);
-    overflow: hidden;
-  }
-  .sp-statusbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 26px 2px;
-    font-family: var(--font-body);
-    font-weight: var(--weight-bold);
-    font-size: 13px;
-    flex: 0 0 auto;
-  }
-}
-
-/* Below 600px, hide the desktop-only background stickers to avoid clutter */
-@media (max-width: 599px) {
-  .sp-bg {
-    display: none;
-  }
 }
