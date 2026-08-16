@@ -5,7 +5,6 @@ import { SelectField } from "../../design-system/components/forms/SelectField.js
 import { Button } from "../../design-system/components/actions/Button.jsx";
 import { ScreenHeader } from "../../design-system/components/navigation/ScreenHeader.jsx";
 import { Sticker } from "../../design-system/components/brand/Sticker.jsx";
-import { Tag } from "../../design-system/components/display/Tag.jsx";
 import { useRegistration } from "../context/RegistrationContext.jsx";
 import { useStepNav } from "../lib/useStepNav.js";
 import { asset, ASSET_BASE } from "../lib/asset.js";
@@ -43,6 +42,7 @@ export default function VisitDetail() {
               {DAYS.map((d) => (
                 <OptionCard
                   key={d.iso} label={d.day} description={d.date} tone="plain"
+                  align="center" showCheck={false}
                   selected={data.visitDate === d.iso} onClick={() => patch({ visitDate: d.iso })}
                 />
               ))}
@@ -59,6 +59,7 @@ export default function VisitDetail() {
               {SLOTS.map((s) => (
                 <OptionCard
                   key={s} label={s} tone="plain"
+                  align="center" showCheck={false}
                   selected={data.visitTime === s} onClick={() => patch({ visitTime: s })}
                 />
               ))}
@@ -72,13 +73,6 @@ export default function VisitDetail() {
           />
         </div>
       </Card>
-
-      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-        <span style={{ fontSize: 12, fontWeight: 700, color: "var(--text-muted)" }}>Open all three days:</span>
-        <Tag tone="peach" size="sm">Food</Tag>
-        <Tag tone="purple" size="sm">Fashion</Tag>
-        <Tag tone="green" size="sm">Creative</Tag>
-      </div>
 
       <div style={{ marginTop: "auto" }}>
         <Button variant="primary" size="lg" fullWidth withArrow disabled={!valid} onClick={goNext}>Next</Button>
