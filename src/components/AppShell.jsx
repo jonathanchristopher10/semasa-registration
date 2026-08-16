@@ -15,8 +15,6 @@ export function AppShell() {
         style={{ width: 36, bottom: "14%", right: "14%", transform: "rotate(14deg)" }} />
       <img className="sp-bg" src={asset("assets/icons/flower.png")} alt=""
         style={{ width: 78, bottom: "6%", left: "8%" }} />
-      <img className="sp-bg" src={asset("assets/illustrations/car-green.png")} alt=""
-        style={{ width: 120, top: "10%", right: "9%", transform: "rotate(6deg)" }} />
 
       <div className="sp-phone">
         <div className="sp-statusbar">
