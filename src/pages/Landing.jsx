@@ -51,38 +51,38 @@ export default function Landing() {
         />
 
         {/* sparkles around the character band */}
-        <Sticker name="starPurple" size={18} top={-30} left={96} rotate={-12} basePath={ASSET_BASE} />
-        <Sticker name="starYellow" size={16} top={-40} right={64} rotate={-10} basePath={ASSET_BASE} />
-        <Sticker name="starPurple" size={16} bottom={-6} left={-2} rotate={12} basePath={ASSET_BASE} />
+        <Sticker name="starPurple" size={18} top={-100} left={96} rotate={-12} basePath={ASSET_BASE} />
+        <Sticker name="starYellow" size={16} top={-95} right={110} rotate={-10} basePath={ASSET_BASE} />
+        <Sticker name="starPurple" size={16} bottom={-40} left={5} rotate={12} basePath={ASSET_BASE} />
 
         {/* --- characters resting on the card's top edge: kid (left) · mascot (center) · car (right) --- */}
         <img
           src={asset("assets/illustrations/kid-waving.png")}
           alt="" aria-hidden="true"
-          style={overCard({ left: 16, top: 0, transform: "translateY(-86%)", width: 92, zIndex: 2 })}
+          style={overCard({ left: 50, top: 0, transform: "translateY(-100%)", width: 92, zIndex: 2 })}
         />
         <img
           src={asset("assets/illustrations/mascot-peek.png")}
           alt="" aria-hidden="true"
-          style={overCard({ left: "50%", top: 0, transform: "translate(-50%, -84%)", width: 132, zIndex: 3 })}
+          style={overCard({ left: "50%", top: 0, transform: "translate(-50%, -90%)", width: 132, zIndex: 3 })}
         />
         <img
           src={asset("assets/illustrations/car-green.png")}
           alt="" aria-hidden="true"
-          style={overCard({ right: 8, top: 0, transform: "translateY(-92%)", width: 116, zIndex: 2 })}
+          style={overCard({ right: 20, top: 0, transform: "translateY(-110%)", width: 105, zIndex: 2 })}
         />
 
         {/* girl walking past the card's bottom-right */}
         <img
           src={asset("assets/illustrations/girl-tote.png")}
           alt="" aria-hidden="true"
-          style={overCard({ right: -6, bottom: -8, width: 62, zIndex: 4 })}
+          style={overCard({ right: 0, bottom: -60, width: 62, zIndex: 4 })}
         />
         {/* little flowers at the card's bottom-left */}
         <img
           src={asset("assets/icons/flower.png")}
           alt="" aria-hidden="true"
-          style={overCard({ left: -8, bottom: 14, width: 38, zIndex: 2 })}
+          style={overCard({ left: 0, bottom: -20, width: 38, zIndex: 2 })}
         />
 
         <Card tone="cream" padding={0} radius="var(--radius-card)" style={{ position: "relative", zIndex: 1 }}>
