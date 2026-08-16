@@ -1,0 +1,66 @@
+:root{
+  /* --- base palette (moodboard "COLOR PALETTE" row) --- */
+  --pink-200:#FFB6C1;
+  --peach-200:#FFE0B2;
+  --green-300:#A7E0A1;
+  --blue-200:#B3D7FF;
+  --purple-200:#CDB4FF;
+  --lemon-100:#FFF6CC;
+  --coral-500:#FF6B6B;
+  --teal-400:#4ECDC4;
+  --orange-400:#FF9F1C;
+  --ink-900:#222222;
+  --grey-500:#6D6D6D;
+
+  /* --- values measured from the finished hero artwork (PAGE1_BACKGROUND.png) --- */
+  --coral-400:#FF8296;   /* CTA pill fill as drawn */
+  --cream-50:#FEF7E9;    /* page background, top */
+  --cream-100:#FEEDCF;   /* page background, bottom */
+  --sky-600:#028CFA;     /* arrow disc + myBCA blue */
+  --white:#FFFFFF;
+
+  /* --- tints for fills and hovers --- */
+  --pink-100:#FFE3E8;
+  --green-100:#E6F7E4;
+  --blue-100:#E4F1FF;
+  --purple-100:#F0E7FF;
+  --peach-100:#FFF0DA;
+  --coral-600:#EF5B5B;
+
+  /* --- semantic aliases: use these in components --- */
+  --surface-page:var(--cream-50);
+  --surface-page-bottom:var(--cream-100);
+  --surface-card:var(--white);
+  --surface-card-cream:var(--cream-50);
+  --surface-field:var(--white);
+  --surface-field-tint:var(--cream-50);
+  --surface-muted:var(--lemon-100);
+
+  --text-body:var(--ink-900);
+  --text-muted:var(--grey-500);
+  --text-on-primary:var(--ink-900);   /* ink on coral — never white */
+  --text-link:var(--sky-600);
+
+  --primary:var(--coral-400);
+  --primary-press:var(--coral-500);
+  --accent-arrow:var(--sky-600);
+
+  --border-ink:var(--ink-900);
+  --border-hair:rgba(34,34,34,.14);
+
+  --step-1:var(--purple-200);
+  --step-2:var(--pink-200);
+  --step-3:var(--green-300);
+  --step-4:var(--blue-200);
+  --step-5:var(--purple-200);
+
+  --tag-food:var(--peach-200);
+  --tag-fashion:var(--purple-200);
+  --tag-creative:var(--green-300);
+  --tag-media:var(--blue-200);
+  --tag-other:var(--lemon-100);
+
+  --success:var(--green-300);
+  --warning:var(--orange-400);
+  --danger:var(--coral-500);
+}

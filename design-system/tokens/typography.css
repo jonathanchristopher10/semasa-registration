@@ -1,0 +1,25 @@
+:root{
+  --font-display:"Hanken Grotesk","Hanken Grotesk Fallback",system-ui,sans-serif;
+  --font-body:"Nunito","Nunito Fallback",system-ui,sans-serif;
+
+  --text-display-lg:34px;
+  --text-display:28px;
+  --text-title:22px;
+  --text-subtitle:18px;
+  --text-body-lg:17px;
+  --text-body-md:15px;
+  --text-label:14px;
+  --text-caption:12px;
+
+  --leading-tight:1.1;
+  --leading-snug:1.25;
+  --leading-body:1.5;
+
+  --weight-regular:400;
+  --weight-semibold:600;
+  --weight-bold:700;
+  --weight-black:800;
+
+  --tracking-display:-0.01em;
+  --tracking-caps:0.06em;
+}

@@ -1,0 +1,134 @@
+/* ------------------------------------------------------------------ *
+ * App shell + interaction states for the SEMASA PIKNIK registration app.
+ * Design tokens come from ../../design-system/styles.css (imported first
+ * in main.jsx). This file only adds layout glue and hover/press motion.
+ * ------------------------------------------------------------------ */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+/* --- Interaction states (mirror the design system's motion rules) --- */
+.sp-btn {
+  transition: transform var(--dur-fast) var(--ease-pop),
+    background var(--dur) var(--ease-out);
+}
+.sp-btn:hover:not(:disabled) {
+  transform: var(--hover-lift);
+}
+.sp-btn:active:not(:disabled) {
+  transform: var(--press-shift);
+}
+.sp-btn--primary:hover:not(:disabled) {
+  background: var(--primary-press);
+}
+.sp-btn--secondary:hover:not(:disabled) {
+  background: var(--cream-100);
+}
+.sp-option:hover {
+  transform: var(--hover-lift);
+}
+.sp-option:active {
+  transform: var(--press-shift);
+}
+
+.sp-pop {
+  animation: sp-pop var(--dur-slow) var(--ease-pop) both;
+}
+@keyframes sp-pop {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- Adaptive shell -------------------------------------------------- *
+ * Mobile-first: the app fills the viewport, no frame.
+ * On wider screens it becomes a centred, outlined phone.
+ * ------------------------------------------------------------------- */
+.sp-shell {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.sp-phone {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    var(--surface-page) 0%,
+    var(--surface-page-bottom) 100%
+  );
+}
+
+.sp-statusbar {
+  display: none; /* hidden on real phones; shown inside the desktop frame */
+}
+
+.sp-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Decorative background stickers behind the phone (desktop only reveals them) */
+.sp-bg {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 600px) {
+  .sp-shell {
+    align-items: center;
+    padding: 24px;
+  }
+  .sp-phone {
+    width: var(--frame-width);
+    min-height: 0;
+    height: min(900px, calc(100dvh - 48px));
+    border: var(--stroke-heavy) solid var(--border-ink);
+    border-radius: var(--radius-phone);
+    box-shadow: var(--shadow-lift);
+    overflow: hidden;
+  }
+  .sp-statusbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 26px 2px;
+    font-family: var(--font-body);
+    font-weight: var(--weight-bold);
+    font-size: 13px;
+    flex: 0 0 auto;
+  }
+}
+
+/* Below 600px, hide the desktop-only background stickers to avoid clutter */
+@media (max-width: 599px) {
+  .sp-bg {
+    display: none;
+  }
+}

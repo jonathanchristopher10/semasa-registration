@@ -1,0 +1,6 @@
+body{margin:0;background:linear-gradient(180deg,var(--surface-page) 0%,var(--surface-page-bottom) 100%);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-body-md);line-height:var(--leading-body);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:var(--weight-bold);letter-spacing:var(--tracking-display);line-height:var(--leading-tight);margin:0}
+a{color:var(--text-link);text-decoration:none;font-weight:var(--weight-bold)}
+a:hover{color:var(--coral-500);text-decoration:underline}
+*,*::before,*::after{box-sizing:border-box}
+button{font-family:inherit}

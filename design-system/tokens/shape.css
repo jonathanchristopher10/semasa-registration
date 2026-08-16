@@ -1,0 +1,20 @@
+:root{
+  --radius-chip:12px;
+  --radius-input:16px;
+  --radius-card:24px;
+  --radius-card-lg:32px;
+  --radius-phone:44px;
+  --radius-pill:999px;
+
+  --stroke-hair:1px;
+  --stroke:2px;
+  --stroke-bold:2.5px;   /* card + button outline at mobile scale */
+  --stroke-heavy:3px;    /* phone frame, ticket card */
+
+  --outline-ink:var(--stroke-bold) solid var(--border-ink);
+
+  --shadow-soft:0 8px 24px rgba(34,34,34,.08);
+  --shadow-card:0 4px 0 rgba(34,34,34,.06);
+  --shadow-lift:0 24px 60px rgba(34,34,34,.16);
+  --shadow-inset-field:inset 0 2px 0 rgba(34,34,34,.04);
+}
