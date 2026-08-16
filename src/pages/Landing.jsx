@@ -20,9 +20,9 @@ export default function Landing() {
   return (
     <Screen padded={false} gap={0} style={{ justifyContent: "space-between", minHeight: "100%" }}>
       {/* --- Hero title + partner credit --- */}
-      <div style={{ position: "relative", padding: "18px 20px 0" }}>
-        <Sticker name="starPurple" size={22} top={8} right={22} rotate={12} basePath={ASSET_BASE} />
-        <Sticker name="starYellow" size={16} top={64} left={16} rotate={-10} basePath={ASSET_BASE} />
+      <div style={{ position: "relative", padding: "48px 20px 0" }}>
+        <Sticker name="starPurple" size={22} top={30} right={22} rotate={12} basePath={ASSET_BASE} />
+        <Sticker name="starYellow" size={16} top={92} left={16} rotate={-10} basePath={ASSET_BASE} />
         <img
           src={asset("assets/illustrations/hero-lockup.png")}
           alt="Welcome to SEMASA PIKNIK 2026"
@@ -40,13 +40,13 @@ export default function Landing() {
           src={asset("assets/illustrations/mascot-peek.png")}
           alt=""
           aria-hidden="true"
-          style={{ position: "absolute", top: 0, left: "50%", transform: "translate(-50%, -62%)", width: 116, zIndex: 3, pointerEvents: "none" }}
+          style={{ position: "absolute", top: 0, left: "50%", transform: "translate(-50%, -66%)", width: 124, zIndex: 3, pointerEvents: "none" }}
         />
         <img
           src={asset("assets/illustrations/kid-waving.png")}
           alt=""
           aria-hidden="true"
-          style={{ position: "absolute", top: -34, left: -2, width: 74, zIndex: 2, pointerEvents: "none" }}
+          style={{ position: "absolute", top: 0, left: 6, transform: "translateY(-88%)", width: 90, zIndex: 2, pointerEvents: "none" }}
         />
         <img
           src={asset("assets/illustrations/girl-tote.png")}
